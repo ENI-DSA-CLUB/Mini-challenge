@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENI DSA Club - Challenges</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script async defer src="js/index.js"></script>
+    <script async defer src="js/fen.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ENI DSA Club - Challenges</h1>
+        <div class="challenge" id="chall-1">
+            <h3>Challenge 1 </h3>
+            <p>L' ENI DSA Club est un jeune club à l'ENI fondé en 2024. L' algorithme est le coeur de notre club.</p>
+            <p>Un algorithme est une suite logique et ordonnée d'instructions permettant de résoudre un problème. Par exemple, combien de jours avez-vous vécu depuis votre naissance ?</p>
+            <p><strong>Date de naissance :</strong> 27 mars 2007</p>
+            <p>Pour résoudre ce challenge, vous devrez calculer votre âge en jours à partir de votre date de naissance. Voici les étapes :</p>
+            <ol>
+                <li>Obtenez la date actuelle.</li>
+                <li>Calculez la différence en jours entre la date actuelle et votre date de naissance.</li>
+                <li>Affichez le résultat sous forme d'un nombre entier représentant votre âge en jours.</li>
+            </ol>
+            <input type="number" id="rep-1" placeholder="Saisir ici la réponse (entier)">
+            <button onclick="chall1()" id="btn-chall-1">Valider</button>
+        </div>
+
+        <!-- Challenge 2 -->
+        <div class="challenge" id="chall-2">
+            <h3>Challenge 2 </h3>
+            <p>Les mathématiques jouent un rôle incontournable dans la résolution d'un problème algorithmique et assurent une meilleure performance de notre algorithme.</p>
+            <p>Les cellules se divisent par mitose, doublant leur nombre chaque heure. Si une seule cellule est présente au départ, combien d'heures sont nécessaires pour atteindre <strong>536 870 912</strong> cellules ?</p>
+            <input type="number" id="rep-2" placeholder="Saisir ici la réponse (entier)">
+            <button onclick="chall2()" id="btn-chall-2">Valider</button>
+        </div>
+
+        <!-- Challenge 3 -->
+        <div class="challenge" id="chall-3">
+            <h3>Challenge 3 </h3>
+            <p>Les <strong>structures de données</strong> sont essentielles en algorithmique. Elles permettent de stocker et d’organiser efficacement les informations. On distingue :</p>
+            <ul>
+                <li><strong>Linéaires</strong> : tableaux, listes chaînées, piles, files, dictionnaires...</li>
+                <li><strong>Non linéaires</strong> : arbres, graphes...</li>
+            </ul>
+
+            <p>Votre ami vous a envoyé un <strong>fichier ZIP protégé(secret.zip)</strong>. Il contient un <strong>numéro de compte bancaire</strong>, mais il faut d’abord trouver le mot de passe pour l’ouvrir.</p>
+
+            <h2>📂 Téléchargez les fichiers nécessaires:</h2>
+            <a href="images/secret.zip" class="download" download>📥 Télécharger secret.zip</a> <br>
+            <a href="images/code.txt" class="download" download>📥 Télécharger code.txt</a>
+
+            <h2>🔐 Comment retrouver le mot de passe ?</h2>
+            <p>Chaque ligne du fichier contient un <strong>nombre</strong> et une <strong>lettre</strong> (séparés par un espace). Suivez ces étapes :</p>
+            <ol>
+                <li>Classez les nombres en <strong>impairs</strong> et <strong>pairs</strong>.</li>
+                <li>Associez chaque impair au premier pair disponible.</li>
+                <li>Transformez chaque lettre en <strong>sa position alphabétique</strong> (A = 1, B = 2, ..., Z = 26).</li>
+                <li>Ajoutez la valeur du nombre impair à celle du nombre pair.</li>
+                <li>Si la somme dépasse 26, soustrayez 26.</li>
+                <li>Convertissez le résultat en lettre.</li>
+                <li>Concaténez les lettres obtenues pour former le mot de passe.</li>
+            </ol>
+
+            <h2>📖 Exemple :</h2>
+            <pre>
+1 J  
+3 F  
+2 T  
+5 Y  
+6 M  
+88 B  
+            </pre>
+            <p>On sépare :</p>
+            <ul>
+                <li><strong>Impairs</strong> → (1, J), (3, F), (5, Y)</li>
+                <li><strong>Pairs</strong> → (2, T), (6, M), (88, B)</li>
+            </ul>
+            <p>On applique l’algorithme :</p>
+            <ul>
+                <li>1 (J=10) + 2 (T=20) = 30 → 30 - 26 = 4 → <strong>D</strong></li>
+                <li>3 (F=6) + 6 (M=13) = 19 → <strong>S</strong></li>
+                <li>5 (Y=25) + 88 (B=2) = 27 → 27 - 26 = 1 → <strong>A</strong></li>
+            </ul>
+            <p>✅ <strong>Mot de passe trouvé :</strong> <code>DSA</code></p>
+
+            <h2>🎯 Objectif final :</h2>
+            <p>Utilisez le mot de passe pour ouvrir le fichier ZIP et récupérer le <strong>numéro de compte bancaire</strong>.</p>
+            <p>Entrez la réponse ici :</p>
+            <input type="text" id="rep-3" placeholder="Numéro de compte bancaire" style="padding: 8px; width: 100%; max-width: 300px;">
+            <button onclick="chall3()" id="btn-chall-3">Valider</button>
+        </div>
+    </div>
+</body>
+</html>
